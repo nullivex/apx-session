@@ -1,7 +1,7 @@
 apx-session [![Build Status](https://travis-ci.org/snailjs/apx-session.png?branch=0.3.0)](https://travis-ci.org/snailjs/apx-session)
 ============
 
-Mongoose initializer for APX API server
+Session manager initializer for APX API server
 
 ## Usage
 

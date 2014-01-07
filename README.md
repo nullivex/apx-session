@@ -1,4 +1,4 @@
-apx-session [![Build Status](https://travis-ci.org/snailjs/apx-session.png?branch=0.3.0)](https://travis-ci.org/snailjs/apx-session)
+apx-session [![Build Status](https://travis-ci.org/snailjs/apx-session.png?branch=master)](https://travis-ci.org/snailjs/apx-session)
 ============
 
 Session manager initializer for APX API server
@@ -14,26 +14,31 @@ $ npm install apx apx-session
 ```js
 var apx = require('apx')
 apx.start({
-  initializers: [require('apx-session')],
-  session: {key: 'foo', prefix: 'foo'}
+  initializers: ['apx-session']
 })
 ```
 
+## Security
+
+This session manager does not provide any hijack protection. To use secured sessions the connection should be made
+via TLS/SSL which is the only true way to secure the connection.
+
 ## Configuration
 
-### Key
-* Variable `session.key`
-* Required **yes**
+### Max Age
+* Parameter `session.maxAge`
+* Required **no**
+* Default `0`
+
+The max age in seconds of the session after which the session will expire.
+
+### Storage
+* Parameter `session.storage`
+* Required **no**
 * Default `null`
 
-Secret key used to sign sessions
-
-### Prefix
-* Variable `session.prefix`
-* Required **no**
-* Default `apx`
-
-Prefix to use on sessions for multiple servers on the same domain.
+The storage parameter is passed to [object-manage](https://github.com/snailjs/object-manage) see the storage section
+there for more options.
 
 ## Changelog
 

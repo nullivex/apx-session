@@ -30,7 +30,8 @@
     "node": ">=0.8.0"
   },
   "dependencies": {
-    "object-manage": "git://github.com/snailjs/object-manage#master"
+    "object-manage": "git://github.com/snailjs/object-manage#master",
+    "uuid": "~1.4.1"
   },
   "devDependencies": {
     "grunt": "~0.4.2",

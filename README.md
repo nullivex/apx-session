@@ -42,5 +42,8 @@ there for more options.
 
 ## Changelog
 
+### 0.2.0
+* Session ID added to response is now `$sessionId`
+
 ### 0.1.0
 * Initial release

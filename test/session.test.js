@@ -37,8 +37,8 @@ describe('Session Management',function(){
     }
     apx.instance.runAction(action,{},function(err,res){
       if(err) throw err
-      sessionId = res.get('sessionId')
-      expect(res.get('sessionId')).to.not.equal(undefined)
+      sessionId = res.get('$sessionId')
+      expect(res.get('$sessionId')).to.not.equal(undefined)
       done()
     })
   })
@@ -51,9 +51,9 @@ describe('Session Management',function(){
         next()
       }
     }
-    apx.instance.runAction(action,{sessionId: sessionId},function(err,res){
+    apx.instance.runAction(action,{$sessionId: sessionId},function(err,res){
       if(err) throw err
-      expect(res.get('sessionId')).to.equal(sessionId)
+      expect(res.get('$sessionId')).to.equal(sessionId)
       done()
     })
   })
@@ -66,9 +66,9 @@ describe('Session Management',function(){
         next()
       }
     }
-    apx.instance.runAction(action,{sessionId: sessionId},function(err,res){
+    apx.instance.runAction(action,{$sessionId: sessionId},function(err,res){
       if(err) throw err
-      expect(res.get('sessionId')).to.equal(sessionId)
+      expect(res.get('$sessionId')).to.equal(sessionId)
       done()
     })
   })
@@ -82,9 +82,9 @@ describe('Session Management',function(){
         next()
       }
     }
-    apx.instance.runAction(action,{sessionId: sessionId},function(err,res){
+    apx.instance.runAction(action,{$sessionId: sessionId},function(err,res){
       if(err) throw err
-      expect(res.get('sessionId')).to.equal(sessionId)
+      expect(res.get('$sessionId')).to.equal(sessionId)
       done()
     })
   })
@@ -101,7 +101,7 @@ describe('Session Management',function(){
     }
     apx.instance.runAction(action,{sessionId: sessionId},function(err,res){
       if(err) throw err
-      expect(res.get('sessionId')).to.equal(undefined)
+      expect(res.get('$sessionId')).to.equal(undefined)
       done()
     })
   })

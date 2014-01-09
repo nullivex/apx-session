@@ -25,6 +25,13 @@ via TLS/SSL which is the only true way to secure the connection.
 
 ## Configuration
 
+### Key
+* Parameter `session.key`
+* Required **no**
+* Default `$sessionId`
+
+The key that denotes the session id.
+
 ### Max Age
 * Parameter `session.maxAge`
 * Required **no**

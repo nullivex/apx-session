@@ -49,6 +49,9 @@ there for more options.
 
 ## Changelog
 
+### 0.2.1
+* Upgraded to APX 0.7.1
+
 ### 0.2.0
 * Session ID added to response is now `$sessionId`
 * Upgraded for APX 0.6

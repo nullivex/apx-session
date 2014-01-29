@@ -72,6 +72,50 @@ describe('Session Management',function(){
       done()
     })
   })
+  it('should fail gracefully when a blank session id is passed',function(done){
+    var action = {
+      name: 'sessionTest',
+      description: 'Test to make sure an invalid sessionId is handled gracefully',
+      run: function(apx,req,res,next){
+        res.success()
+        next()
+      }
+    }
+    apx.instance.runAction(action,{$sessionId: null},function(err,res){
+      expect(res.get('status')).to.equal('ok')
+      done()
+    })
+  })
+  it('should fail gracefully when a bogus session id is passed',function(done){
+    var action = {
+      name: 'sessionTest',
+      description: 'Test to make sure an invalid sessionId is handled gracefully',
+      run: function(apx,req,res,next){
+        res.success()
+        next()
+      }
+    }
+    apx.instance.runAction(action,{$sessionId: 'foobar'},function(err,res){
+      expect(res.get('status')).to.equal('ok')
+      expect(res.get('$sessionId')).to.not.equal('foobar')
+      done()
+    })
+  })
+  it('should remove the session id from the request',function(done){
+    var action = {
+      name: 'sessionTest',
+      description: 'Test to make sure sessionId is removed from the request',
+      run: function(apx,req,res,next){
+        expect(req.exists('$sessionId')).to.equal(false)
+        res.success()
+        next()
+      }
+    }
+    apx.instance.runAction(action,{$sessionId: 'foo'},function(err,res){
+      expect(res.get('status')).to.equal('ok')
+      done()
+    })
+  })
   it('should allow removal of session data',function(done){
     var action = {
       name: 'sessionTest',

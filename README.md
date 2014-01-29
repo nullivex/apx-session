@@ -49,6 +49,11 @@ there for more options.
 
 ## Changelog
 
+### 0.2.2 (unreleased)
+* Removed the $sessionId from the request after initial middleware
+* Added test to confirm that blank sessionIds fail gracefully
+* Added testing against bogus session ids
+
 ### 0.2.1
 * Upgraded to APX 0.7.1
 

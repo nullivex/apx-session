@@ -1,5 +1,4 @@
-apx-session [![Build Status](https://travis-ci.org/snailjs/apx-session.png?branch=master)](https://travis-ci.org/snailjs/apx-session)
-============
+# apx-session [![Build Status](https://travis-ci.org/snailjs/apx-session.png?branch=master)](https://travis-ci.org/snailjs/apx-session)
 
 Session manager initializer for APX API server
 
@@ -49,7 +48,7 @@ there for more options.
 
 ## Changelog
 
-### 0.2.2 (unreleased)
+### 0.2.2
 * Removed the $sessionId from the request after initial middleware
 * Added test to confirm that blank sessionIds fail gracefully
 * Added testing against bogus session ids

@@ -1,6 +1,6 @@
 {
   "name": "apx-session",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "Session manager for APX API server",
   "homepage": "https://github.com/snailjs/apx-session",
   "bugs": "https://github.com/snailjs/apx-session/issues",

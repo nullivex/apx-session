@@ -1,4 +1,15 @@
-# apx-session [![Build Status](https://travis-ci.org/snailjs/apx-session.png?branch=master)](https://travis-ci.org/snailjs/apx-session)
+# APX Session
+
+## Kado
+
+STOP AND READ THIS
+
+APX or Apex is no longer maintained and is superseded by Kado.
+
+A new package is available to handle all your JavaScript needs.
+See [kado.org](https://kado.org) for details.
+
+## Summary
 
 Session manager initializer for APX API server
 
